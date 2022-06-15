@@ -1,4 +1,4 @@
-            * {
+                * {
         padding: 0;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         margin: 0;
@@ -644,8 +644,8 @@
             margin: auto;
         }
         .blogs .box-container .box .content p  {
-      
-            font-size: 180%;
+            margin-top:20px;
+            font-size: 130%;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-weight: bolder;
         }
@@ -726,9 +726,7 @@
         }
 
     }
-   @media (max-width:470px) {
-        .features .box-container .box {
-            margin-top: 20px;
-        }
+    @media (max-width:370px) {
+        
 
     }

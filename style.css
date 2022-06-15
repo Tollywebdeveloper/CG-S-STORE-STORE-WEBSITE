@@ -1,4 +1,4 @@
-        * {
+            * {
         padding: 0;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         margin: 0;
@@ -639,7 +639,7 @@
             flex-direction: column;
         }
         .features .box-container .box {
-            width: 90%;
+            width:100%;
             margin: auto;
         }
         .blogs .box-container .box .content p  {
@@ -649,8 +649,8 @@
             font-weight: bolder;
         }
         .footer .box-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
         }
         .footer .box-container .box {
             padding-bottom: 32px;
@@ -658,6 +658,9 @@
         .footer .box-container .box #img-shift {
           margin-left: 40px;
           
+        }
+        .footer .done {
+            font-size: 140%;
         }
         .review .review-slider .box p {
             font-size: 160%; 

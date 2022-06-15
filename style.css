@@ -1278,7 +1278,8 @@ and overflow:hidden used to create gap also between three images close together
 /*@Media Queries */
 @media (max-width:1200) {
     .blogs .box-container {
-        display: block;
+        display: flex;
+        flex-direction:column;
     }
 }
 @media (max-width:991px) {

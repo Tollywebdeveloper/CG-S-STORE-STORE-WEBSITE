@@ -635,7 +635,6 @@ and overflow:hidden used to create gap also between three images close together
         display: inline-flex;
         margin: auto;
         width: 100%;
-        margin-left: -30px;
     }
     .features .box-container .box h3 {
         font-size: 220%;

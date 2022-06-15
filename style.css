@@ -630,11 +630,37 @@ and overflow:hidden used to create gap also between three images close together
 
 
 /*@Media Queries */
-@media (max-width:1200px) {
+@media (max-width:1024px) {
     .blogs .box-container {
         display: block;
     }
+    .features .box-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .blogs .box-container .box  {
+        margin-top:20px;
+        font-size: 18px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+    }
+    .footer .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+    .footer .box-container .box {
+        padding-bottom: 32px;
+    }
+    .footer .box-container .box payment-img {
+        position: absolute;
+        bottom: 1;
+        right: 1;
+    }
+    .review .review-slider .box p {
+        font-size: 160%; 
+    }
 }
+
 @media (max-width:991px) {
     html {
         font-size: 55%;

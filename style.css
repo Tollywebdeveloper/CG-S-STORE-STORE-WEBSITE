@@ -630,32 +630,11 @@ and overflow:hidden used to create gap also between three images close together
 
 
 /*@Media Queries */
-@media (max-width:1024px) {
-    .features .box-container {
-        display: inline-flex;
-        margin: auto;
-        width: 100%;
-    }
-    .features .box-container .box h3 {
-        font-size: 220%;
-    }
-    .features .box-container .box {
-        margin-top: 30px;
-    }
+@media (max-width:1200px) {
     .blogs .box-container {
-        display: flex;
+        display: block;
     }
-    .footer .box-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    }
-    .footer .box-container .box {
-        padding-bottom: 32px;
-    }
-    }.review .review-slider .box p {
-        font-size: 160%;
-    }
-
+}
 @media (max-width:991px) {
     html {
         font-size: 55%;

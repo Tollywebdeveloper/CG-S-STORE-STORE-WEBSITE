@@ -1,0 +1,692 @@
+* {
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+:root {
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0.5rem 1rem rgba(0,0,0,.1);
+    --border:2rem solid rgba(0,0,0,.1);
+    --outline:1rem solid rgba(0,0,0,.1);
+    --outline-hover: 2rem solid rgba(0,0,0,.1);
+}
+
+html {
+    font-size: 13px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body {
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 2.2rem 1%;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.6);
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .6rem;
+    border: 2px solid #130f40;
+    color: #130f40;
+    cursor: pointer;
+    
+}
+.btn:hover {
+    background: #ff7800;
+    color: white;
+}
+section {
+    padding: 2rem;
+}
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #130f40;
+}
+.header #logo-edit {
+    color:#ff7800;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    margin: 0px     1rem;
+    color: #130f40;
+}
+
+.header .navbar a:hover {
+    color:#ff7800;
+}
+#menu-btn {
+    padding: 10px 15px;
+}
+#search-btn {
+    padding: 10px 15px;
+}
+#shop-btn {
+    padding: 10px 15px;
+}
+#login-btn {
+    padding: 10px 15px;
+}
+.header .icons #menu-btn {
+    height: 2.5rem;
+    display: none;
+    width: 2rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: gainsboro;
+    color: #130f40;
+    font-size: 2rem;
+    margin-left: .3rem;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons #search-btn {
+    height: 2.5rem;
+    width: 2rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: gainsboro;
+    color: #130f40;
+    font-size: 2rem;
+    margin-left: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons #shop-btn {
+    height: 2.5rem;
+    width: 2rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: gainsboro;
+    color: #130f40;
+    font-size: 2rem;
+    margin-left: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons #login-btn {
+    height: 2.5rem;
+    width: 2rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: gainsboro;
+    color: #130f40;
+    font-size: 2rem;
+    margin-left: .4rem;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons #shop-btn:hover {
+    background: #ff7800;
+    color: #fff;
+
+}
+.header .icons #search-btn:hover {
+    background: #ff7800;
+    color: #fff;
+
+}
+.header .icons #menu-btn:hover {
+    background: #ff7800;
+    color: #fff;
+
+}
+.header .icons #login-btn:hover {
+    background: #ff7800;
+    color: #fff;
+
+}
+
+.header .search-form {
+    position: absolute;
+    width: 50rem;
+    top: 110%;
+    right: -110%;
+    max-width: 50rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    box-shadow:1px 2px 2px  gray ;
+}
+.header .search-form .active {
+    right: 40rem;
+    transition: .4s linear;
+}
+.header .search-form input {
+    height: 100%;
+    width: 95%;
+    background: none;
+    text-transform: none;
+    font-size: 1.4rem;
+    color: #130f40;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.header .search-form #label {
+    font-size: 2.0rem;
+    padding-right: 1.5rem;
+    color: #130f40;
+    cursor: pointer;
+}
+.header .search-form #label:hover {
+    color: #ff7800;
+}
+
+
+/*Shopping cart section */
+.header .shopping-cart {
+    position: absolute;
+    height: auto;
+    top: 105%;
+    right: -110%;
+    width: 40rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 4px 2px  gainsboro;
+    width: 25rem;
+    background: #fff;
+}
+.header .shopping-cart .active {
+    right: 2rem;
+    transition: .6s linear;
+}
+
+.header .shopping-cart .box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+.header .shopping-cart .box  img {
+    height: 7.5rem;
+}
+.header .shopping-cart .box  .fa-trash {
+    font-size: 1.8rem;
+    color: #130f40;
+    position: absolute;
+    top: 60%;
+    right: 0.5rem;
+    cursor: pointer;
+    transform: translateY(-50%);  
+}
+.header .shopping-cart .box  .fa-trash:hover {
+    color: #ff7800;
+}
+.header .shopping-cart .box .content h3 {
+    color: #130f40;
+    font-size: 1.40rem;
+    padding-bottom: 1rem;
+}
+.header .shopping-cart .box .content span {
+    color:#666;
+    font-size: 1.3rem;
+}
+.header .shopping-cart .box .content .quantity {
+    padding-left: 0.5rem;
+}
+.header .shopping-cart .total {
+    font-size: 2.0rem;
+    text-align: center;
+    color: #130f40;
+}
+.header .shopping-cart .btn {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+/*Login section */
+
+.header .login-form {
+    position: absolute;
+    height: 360px;
+    top: 110%;
+    right: -110%;
+    width: 30rem;
+    box-shadow:2px 2px 3px 2px  gray ;
+    border-radius: .5rem;
+    background-color: #fff;
+}
+.header .login-form .active {
+    right: 2rem;
+    transition: .4s linear;
+}
+.header .login-form h3 {
+    padding-top: 15px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #130f40;
+    text-align: center;
+}
+.header .login-form .box {
+    margin: 1rem ;
+    width: 86%;
+    margin-left: 7%;
+    background: #eee;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: #130f40;
+    text-transform: none;
+    font-size: 15px;
+}
+.header .login-form .btn {
+    margin-left: 28%;
+}
+.header .login-form p {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 16px;
+}
+.header .login-form p a {
+    color: #ff7800;
+    text-decoration: underline;
+}
+.header .login-form .box:hover {
+    border: 2px solid #ff7800;
+}  
+
+/*Section styling */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./img/banner-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+}
+.home .content {
+    text-align: center;
+    width: 60rem;
+}
+.home .content h3 {
+    color:#130f40;
+    font-size: 3rem;
+}
+.home .content h3 span {
+    color: #ff7800;
+}
+.home .content p {
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1.7rem 0;
+    line-height: 1.8;
+}
+
+
+/*Our features section */
+.heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color: #130f40;
+}
+.heading span {
+    color: #fff;
+    display: inline-block;
+    padding: 2rem 4rem;
+    background-color: #ff7800;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+
+.features .box-container {
+    margin: auto;
+}
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+    padding-top: 20px;
+}
+.features .box-container .box {
+    padding: 3rem 2rem;
+    background: #fff;
+    outline: gainsboro;
+    outline-offset: -3rem;
+    text-align: center;
+    box-shadow:2px 2px 3px 2px  gainsboro;
+}
+.features .box-container .box:hover {
+    box-shadow:2px 0px 1px 1px  #ff7800;
+    opacity: 0.9;
+}
+.features .box-container .box img {
+    margin: 1rem 0;
+    height: 15rem;
+}
+.features .box-container .box h3 {
+    font-size: 2.5rem;
+    line-height: 2.1;
+    color: #130f40;
+}
+.features .box-container .box p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #130f40;
+}
+
+.products .box {
+    margin-bottom: 20px;
+}
+.products .product-slider {
+    padding: 1rem;
+}
+.products .product-slider:first-child {
+    margin-bottom: 2rem;
+}
+.products .product-slider .box {
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    transition: .5s linear;
+}
+.products .product-slider .box:hover {
+    outline-offset: 0rem;
+    outline:.3rem solid #130f40 ;
+}
+.products .product-slider .box img {
+    height: 20rem;
+}
+.products .product-slider .box h3 {
+    font-size: 2.5rem;
+    color: #130f40;
+}
+.products .product-slider .box .prcice {
+    font-size: 2rem;
+    color:#fff;
+    padding: 5rem 0;
+}
+.products .product-slider .box .stars .fa-star {
+    font-size: 2rem;
+    color: #ff7800;
+    padding: .5rem 0;
+}
+.products .product-slider .box .stars #star-half {
+    font-size: 2rem;
+    color: #ff7800;
+    padding: .5rem 0;
+}
+.review .box {
+    margin-top: 10px;
+}
+.review .review-slider {
+    padding: 1rem;
+}
+.review .review-slider .box {
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline: #ff7800;
+    outline-offset: -1rem;
+    transition: .5s linear;
+}
+.review .review-slider .box:hover {
+    outline-offset: 0rem;
+    outline:.3rem solid #130f40 ;
+}
+.review .review-slider .box img {
+    border-radius: 50%;
+}
+.review .review-slider .box p {
+    padding: 1rem;
+    font-size: 1.9rem;
+    line-height: 1.8;
+    color: #130f40;
+}
+.review .review-slider .box h3 {
+    padding: 1rem;
+    font-size: 1.9rem;
+    line-height: 1.8;
+    color: #130f40;
+    padding-bottom: .9rem;
+}
+.review .review-slider .box .stars .fa-star {
+    font-size: 2.5rem;
+    color: #ff7800;
+    padding: .5rem 0;
+}
+.review .review-slider .box .stars #star-half {
+    font-size: 2rem;
+    color: #ff7800;
+    padding: .5rem 0;
+}
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+}
+.blogs .box-container .box {
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow:2px 2px 3px 2px  gainsboro ;
+    background: #fff;
+}
+/*
+I noted object-fit:cover 
+and overflow:hidden used to create gap also between three images close together 
+*/
+.blogs .box-container .box img {
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.blogs .box-container .box .content {
+    padding: 2rem;
+}
+.blogs .box-container .box .content .icons {
+    display: flex;
+    font-size: 1.1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom:.1rem solid #090721;
+}
+
+.blogs .box-container .box .content .icons a {
+    color: #666;
+}
+.blogs .box-container .box .content .icons .fa-user {
+    color: #ff7800;
+}
+.blogs .box-container .box .content .icons #calender {
+    color: #ff7800;
+}
+.blogs .box-container .box .content h3 {
+    line-height: 1.5;
+    color: #130f40;
+    font-size: 1.5rem;
+    padding: .6rem 0;
+}
+.blogs .box-container .box .content p {
+    font-size: 15px;
+}
+
+.footer {
+    background: #fff;
+    margin-top: 40px;
+}
+.footer  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem,1fr));
+    gap: 1.5rem;
+}
+.footer  .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #130f40;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .links {
+    display: block;
+    font-size: 1.2rem;
+    color: #666;
+    padding: .5rem 0;
+}
+.footer .box-container .box .links #icon-edit {
+    color: #ff7800;
+    padding-right: .4rem;
+}
+.footer .box-container .box .links:hover #icon-edit {
+    padding-right: 2rem;
+}
+.footer .box-container .box p {
+    line-height: 1.4;
+    font-size: 1.2rem;
+}
+
+.footer .box-container .box .share a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: .4rem;
+    font-size: 2rem;
+    color: #130f40;
+    margin-left: .2rem;   
+    padding: 0.2rem 1rem ;
+    background-color: #eee;
+    
+}.footer .box-container .box .share a:hover {
+    background: #ff7800;
+    color: #fff;
+}
+.footer .box-container .box .email {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: #eee;
+    font-size: 15px;
+    color: #130f40;
+}
+
+.footer .box-container .box img {
+    padding: 1rem;
+}
+.footer .done {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: #130f40;
+    border-top: 2px solid gainsboro;
+}
+.footer .done span {
+    color: #ff7800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@Media Queries */
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .section .home {
+        width: 100%;
+    }
+    .header {
+        padding: 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+    .home {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    .header .icons #menu-btn {
+        display: inline-block;
+    }
+    
+    .header .search-form {
+        width: 90%;
+    }
+    .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow:2px 2px 3px 2px  gray ;
+        background: #fff;
+    }
+    .header .navbar a {
+        font-size: 2rem;
+        margin: 3rem 2.7rem;
+        display: block;
+        text-align: center;
+    }
+    .header .navbar .active {
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+}
+@media (max-width:500px) {
+   .section .content {
+   }
+  
+    .heading {
+        font-size: 2.5rem;
+    }
+    .footer {
+        text-align: center;
+    }
+
+}
+@media (max-width:370px) {
+    
+
+}

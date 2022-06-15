@@ -726,7 +726,9 @@
         }
 
     }
-    @media (max-width:370px) {
-        
+   @media (max-width:470px) {
+        .features .box-container .box {
+            margin-top: 20px;
+        }
 
     }

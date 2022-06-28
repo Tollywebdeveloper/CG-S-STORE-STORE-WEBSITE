@@ -1,4 +1,4 @@
-    * {
+      * {
         padding: 0;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         margin: 0;
@@ -636,16 +636,16 @@
         }
         .features .box-container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
         .features .box-container .box {
             width:100%;
-            margin-top: 20px;
-            margin: auto;
+            margin-bottom: 20px;
+            
         }
         .blogs .box-container .box .content p  {
-            margin-top:20px;
-            font-size: 130%;
+            margin-top:50px;
+            font-size: 70%;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-weight: bolder;
         }
@@ -655,6 +655,15 @@
         }
         .footer .box-container .box {
             padding-bottom: 32px;
+        }
+        .footer .box-container .box p {
+            font-size: 14px;
+        }
+        .footer .box-container .box h3 {
+            font-size: 16px;
+        }
+        .footer .box-container .box a {
+            font-size: 15px;
         }
         .footer .box-container .box #img-shift {
           margin-left: 40px;

@@ -1501,5 +1501,7 @@
         .blogs .box-container .box .content p {
             margin-top: 5px;
         }
-
+        body {
+              overflow-x:hidden;   
+             }
     }
